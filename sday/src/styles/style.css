@@ -1,0 +1,111 @@
+/* Configurações de tema "black" e "white" */
+body{
+    --backgroundDark: #0F0F0F;
+    --backgroundItemDark: #222222;
+    --backgroundItem2Dark: #5D5B5B;
+    --textColorDark: #ffffff;
+    --inputDark: #494949;
+
+    --backgroundWhite: #E0E0E0;
+    --backgroundItemWhite: #C2C2C2;
+    --backgroundItem2White: #A2A2A2;
+    --textColorWhite: #000000;
+    --inputWhite: #C1C1C1;
+
+
+    --backgroundSettingsProjectDark: url("../assets/backgroundSettingsDark.svg");
+    --backgroundSettingsProjectWhite: url("../assets/backgroundSettings.svg");
+
+    --backgroundUsersProjectWhite: url("../assets/topographyWhite.svg");
+    --backgroundUsersProjectDark: url("../assets/topography.svg");
+
+    --color: #00BFA6;
+    
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+
+html{  
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: var(--backgroundCurrent);
+}
+
+
+.inputs, .inputs-half{
+    background-color: var(--inputCurrent);
+    color: var(--textColorCurrent);
+    border: 0;
+    border-radius: 15px;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 25px;
+}
+
+
+.inputs:focus, .inputs-half:focus{
+    outline: 1px solid var(--color);
+}
+
+.background-components{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-top: 2%;
+    align-items: center;
+    background-image: url("../assets/background.svg");
+}
+
+.more{
+    background: var(--color);
+    height: 6.6vh;
+    width: 6.6vh;
+    border-radius: 15px;
+    margin: auto 5% auto auto;
+    cursor: pointer;
+}
+
+.more svg{
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.more:hover svg{
+    transform: rotate(360deg);
+}
+
+.load{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.load p{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.component{
+    width: 8vw;
+    height: 8vw;
+    border-bottom: 1vw solid var(--color);
+    border: 1vw solid var(--backgroundItem2Current);
+    border-top-color: var(--color);
+    border-radius: 50%;
+    animation: load 1s infinite ;
+    margin: auto;
+}
+
+@keyframes load {
+    to{
+        transform: rotate(1turn);
+    }
+}
